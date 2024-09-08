@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted, ref} from 'vue';
+import {ref} from 'vue';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
@@ -49,7 +49,7 @@ function toggleDarkMode(){
                     </div>
 
                     <div class="flex items-center gap-3 flex-1">
-                        <TextInput v-model="keywords" placeholder="Search on the website" class="w-full"
+                        <TextInput v-model="keywords" placeholder="Search on the website" class="w-full rounded-full"
                                    @keyup.enter="search"/>
 
                         <button @click="toggleDarkMode" class="dark:text-white">
@@ -67,10 +67,11 @@ function toggleDarkMode(){
                                                 type="button"
                                                 class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150"
                                             >
-                                                {{ authUser.name }}
+                                                <img :src="authUser.avatar_url" alt="{authUser.name}" class="w-[40px] rounded-full relative transition-all hover:border-blue-500"/>
+
 
                                                 <svg
-                                                    class="ms-2 -me-0.5 h-4 w-4"
+                                                    class="h-4 w-4 bottom-1 right-3 absolute bg-gray-100 rounded-full dark:bg-slate-950 dark:text-gray-100"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 20 20"
                                                     fill="currentColor"

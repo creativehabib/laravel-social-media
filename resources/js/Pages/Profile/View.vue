@@ -2,7 +2,7 @@
 import {computed, ref} from 'vue'
 import {XMarkIcon, CheckCircleIcon, CameraIcon} from '@heroicons/vue/24/solid'
 import {TabGroup, TabList, Tab, TabPanels, TabPanel} from '@headlessui/vue'
-import {usePage} from "@inertiajs/vue3";
+import {Head, usePage} from "@inertiajs/vue3";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import TabItem from "@/Pages/Profile/Partials/TabItem.vue";
 import Edit from "@/Pages/Profile/Edit.vue";
@@ -124,6 +124,7 @@ function followUser() {
 
 <template>
     <AuthenticatedLayout>
+        <Head :title="user.name"/>
         <div class="max-w-[768px] mx-auto h-full overflow-auto">
             <div class="px-4">
                 <div
