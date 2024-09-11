@@ -21,7 +21,7 @@ const editorConfig = {
         <label>Group Name</label>
         <TextInput
             type="text"
-            class="mt-1 block w-full"
+            class="mt-1 block w-full rounded-md"
             v-model="form.name"
             required
             autofocus

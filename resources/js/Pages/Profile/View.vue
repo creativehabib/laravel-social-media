@@ -252,7 +252,7 @@ function followUser() {
                         <TabPanel>
                             <div class="mb-3">
                                 <TextInput :model-value="searchFollowersKeyword" placeholder="Type to search"
-                                           class="w-full"/>
+                                           class="w-full rounded-md"/>
                             </div>
                             <div v-if="followers.length" class="grid grid-cols-2 gap-3">
                                 <UserListItem v-for="user of followers"
@@ -267,7 +267,7 @@ function followUser() {
                         <TabPanel>
                             <div class="mb-3">
                                 <TextInput :model-value="searchFollowingsKeyword" placeholder="Type to search"
-                                           class="w-full"/>
+                                           class="w-full rounded-md"/>
                             </div>
                             <div v-if="followings.length" class="grid grid-cols-2 gap-3">
                                 <UserListItem v-for="user of followings"

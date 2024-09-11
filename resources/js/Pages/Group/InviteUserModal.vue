@@ -68,7 +68,7 @@ function submit() {
                 <label>Username or email</label>
                 <TextInput
                     type="text"
-                    class="mt-1 block w-full"
+                    class="mt-1 block w-full rounded-md"
                     :class="page.props.errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''"
                     v-model="form.email"
                     required
